@@ -21,7 +21,8 @@ Once set up, shoppers and sellers use the GitHub Pages link and see the same lis
 - Listings are public and shared; the catalog starts empty, with no sample products or invented reviews.
 - Display currency changes the symbol only; it does not convert prices.
 - Shoppers can submit order requests from their bag; sellers can accept, decline, and update orders. Each order is visible only to its buyer and seller.
-- Payment and delivery are arranged directly between buyer and seller; the app does not take payment or collect UPI credentials.
+- Sellers can optionally add a UPI ID. After accepting an order, buyers can open their UPI app with the seller and INR amount prefilled; the transfer goes directly to the seller.
+- The site cannot verify a UPI transfer. Sellers must confirm receipt before shipping. It never stores bank account numbers, UPI PINs, or OTPs.
 - Supabase Free currently includes capped database, file storage, and bandwidth. Projects can pause after a week of low activity and can be resumed from the dashboard. See [Supabase Free plan details](https://supabase.com/pricing) and [project pausing](https://supabase.com/docs/guides/platform/free-project-pausing).
 
 ## Local preview
