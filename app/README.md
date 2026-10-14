@@ -5,7 +5,7 @@ The GitHub Pages app at [`/app/`](https://anmith2016-create.github.io/sthree-vas
 ## Connect the free database
 
 1. Create a free Supabase project.
-2. In **SQL Editor**, run [`../supabase/schema.sql`](../supabase/schema.sql).
+2. In **SQL Editor**, run [`../supabase/schema.sql`](../supabase/schema.sql). Then run [`../supabase/orders.sql`](../supabase/orders.sql) to enable orders. If the database was set up already, run only the orders migration.
 3. In **Project Settings → API**, copy the Project URL and publishable/anon key into `supabase-config.js`.
 4. In **Authentication → URL Configuration**, set the site URL to `https://anmith2016-create.github.io` and add `https://anmith2016-create.github.io/**` to allowed redirect URLs.
 5. Commit `supabase-config.js` to GitHub. The Pages action will redeploy.
@@ -18,5 +18,6 @@ Supabase Free is $0 and has storage/database/bandwidth limits. Free projects may
 
 - The product catalog starts empty and includes no sample products or invented reviews.
 - Prices are entered in INR. Other currency choices change the display symbol only; they do not convert the amount.
-- Payment preference is informational. Checkout does not process orders or connect to Google Pay or PhonePe.
+- Buyers can submit order requests; each listing seller can accept/decline requests and update shipping/completion status. Buyer and seller can see their order details.
+- Payment and delivery are arranged directly between buyer and seller. Checkout does not process a payment or collect UPI credentials.
 - The old `server.js` is only a local preview and is not the shared production backend.
