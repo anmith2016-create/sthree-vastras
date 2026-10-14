@@ -19,5 +19,6 @@ Supabase Free is $0 and has storage/database/bandwidth limits. Free projects may
 - The product catalog starts empty and includes no sample products or invented reviews.
 - Prices are entered in INR. Other currency choices change the display symbol only; they do not convert the amount.
 - Buyers can submit order requests; each listing seller can accept/decline requests and update shipping/completion status. Buyer and seller can see their order details.
-- Payment and delivery are arranged directly between buyer and seller. Checkout does not process a payment or collect UPI credentials.
+- Sellers may add a UPI ID. After an order is accepted, the buyer can open a UPI app with the seller and INR amount prefilled; money goes directly to the seller.
+- This site cannot verify the transfer. Sellers confirm payment before shipping. No bank account numbers, UPI PINs, or OTPs are collected.
 - The old `server.js` is only a local preview and is not the shared production backend.
