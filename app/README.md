@@ -7,12 +7,17 @@ The GitHub Pages app at [`/app/`](https://anmith2016-create.github.io/sthree-vas
 1. Create a free Supabase project.
 2. In **SQL Editor**, run [`../supabase/schema.sql`](../supabase/schema.sql). Then run [`../supabase/orders.sql`](../supabase/orders.sql) to enable orders. If the database was set up already, run only the orders migration.
 3. In **Project Settings → API**, copy the Project URL and publishable/anon key into `supabase-config.js`.
-4. In **Authentication → URL Configuration**, set the site URL to `https://anmith2016-create.github.io` and add `https://anmith2016-create.github.io/**` to allowed redirect URLs.
+4. In **Authentication → URL Configuration**, set the site URL to `https://anmith2016-create.github.io` and add `https://anmith2016-create.github.io/**` to allowed redirect URLs. In **Authentication → Providers → Email**, turn off **Confirm email** so sign-up and sign-in do not require email verification.
 5. Commit `supabase-config.js` to GitHub. The Pages action will redeploy.
 
 Only the publishable/anon key belongs in this browser config, never a service-role or secret key. The database uses row-level security so seller listings are public while profiles and carts stay private.
 
 Supabase Free is $0 and has storage/database/bandwidth limits. Free projects may pause after 7 days of low activity; resume them from the Supabase dashboard if that happens. Current limits are listed at [Supabase Pricing](https://supabase.com/pricing).
+
+## Account email behavior
+
+- Sign-up and sign-in do not require email confirmation when **Confirm email** is off in Supabase.
+- Changing a login email still requires the new address to be confirmed. Supabase requires this through the browser-only app. Password reset sends a reset link.
 
 ## Honest limits
 
