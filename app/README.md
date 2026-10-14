@@ -16,8 +16,8 @@ Supabase Free is $0 and has storage/database/bandwidth limits. Free projects may
 
 ## Account email behavior
 
-- Sign-up and sign-in do not require email confirmation when **Confirm email** is off in Supabase.
-- Changing a login email still requires the new address to be confirmed. Supabase requires this through the browser-only app. Password reset sends a reset link.
+- Before sign-up, the app checks Supabase Auth settings and blocks the request unless **Confirm email** is off. It will not trigger a confirmation message.
+- The sign-in email cannot be changed and email-based password reset is disabled, so the app never asks users to verify an email address.
 
 ## Honest limits
 
