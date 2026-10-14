@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: sthree-vastras-marketplace
+    runtime: node
+    plan: starter
+    region: singapore
+    rootDir: app
+    buildCommand: node --check server.js
+    startCommand: node server.js
+    healthCheckPath: /api/me
+    disk:
+      name: sthree-vastras-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_FILE
+        value: /var/data/data.json
