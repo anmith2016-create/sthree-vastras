@@ -6,7 +6,7 @@ alter table public.profiles add column if not exists payment_upi_id text not nul
 
 create or replace function public.create_profile_for_new_user()
 returns trigger language plpgsql security definer set search_path = public
-as $
+as $$
 begin
   insert into public.profiles(id, display_name, phone, role, payment_preference, payment_upi_id)
   values (
@@ -20,7 +20,7 @@ begin
   );
   return new;
 end;
-$;
+$$;
 
 create table if not exists public.orders (
   id uuid primary key default gen_random_uuid(),
